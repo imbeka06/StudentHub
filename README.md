@@ -24,7 +24,7 @@ A collaborative platform for students featuring study groups, resource sharing, 
 
 ## 🚀 Getting Started
 1. Clone repository
-2. Run `npm install` in both `/client` and `/backend`
+2. Run `npm install` in both `/frontend` and `/backend`
 3. Set up environment variables
 4. Start with `npm run dev`
 
