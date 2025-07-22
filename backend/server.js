@@ -17,13 +17,8 @@ app.use(cors());
 app.use(express.json());
 
 //PostgreSQL config
-const pool = new Pool({
-    connectionString: process.env.DATABASE_URL,
-    ssl: {
-        rejectUnauthorized: false,
-    },
-});
-app.set('db', pool)
+const db = require('./config/db');
+app.set('db', db);
 
 //Firebase Admin Initialization
 const serviveAccount = require('./firebase-config.json');
