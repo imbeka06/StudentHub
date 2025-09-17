@@ -5,6 +5,7 @@ const { Pool } = require('pg');
 const admin = require('firebase-admin');
 const fs = require('fs');
 const path = require('path');
+const authRoutes = require('./Routes/auth')
 
 //loading .env
 dotenv.config();
@@ -30,6 +31,8 @@ admin.initializeApp({
 app.get('/ping', (req, res) => {
     res.json({message: 'Backend is alive'});
 });
+
+app.use('/auth', authRoutes);
 
 // start server
 app.listen(PORT, () => {
